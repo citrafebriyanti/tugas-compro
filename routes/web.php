@@ -34,3 +34,10 @@ Route::get('/BlogDetail', [BlogDetailController::class, 'index'])->name('BlogDet
 Route::get('backend/blog',[BackendBlogController::class,'index'])->name('backend.blog');
 Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
 Route::get('backend/layanan',[LayananController::class,'index'])->name('backend.layanan');
+route::get('backend/blog/tambah',[BackendBlogController::class,'tambah'])->name('backend.blog.tambah');
+route::post('backend/blog/aksi_tambah',[BackendBlogController::class,'aksi_tambah'])->name('backend.blog.aksi_tambah');
+// route edit blog
+Route::get('backend/blog/edit{id}',[BackendBlogController::class, 'edit'])->name('backend.blog.edit');
+Route::post('backend/blog/aksi_edit/{id}',[BackendBlogController::class, 'aksi_edit'])->name('backend.blog.aksi_edit');
+   
+    

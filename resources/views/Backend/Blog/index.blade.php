@@ -20,115 +20,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @php
+                            $no=1;
+                        @endphp
+                      @foreach ($blog as $item)
                                         
                                         <tr>
-                                            <td>1</td>
-                                            <td>Card title</td>
-                                            <td><img src="/" width="200" alt="images"></td>
-                                            <td><a href="" class="btn btn-warning">edit</a></td>
-                                            <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/1" method="post"></form>
+                                            <td>{{$no++}}</td>
+                                            <td>{{$item->title}}</td>
+                                            <td><img src="{{asset($item->file)}}" width="200" alt="images"></td>
+                                        <td><a href="{{route('backend.blog.edit',$item->id)}}" class="btn btn-warning">edit</a>
+                                            <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/1" method="post">
+                                                @csrf
+                                                <button class="btn btn-danger">Hapus</button>
+                                            </form>
                                                 <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
 
-                                            
+
+                                            </td>
                                         </tr>
                                     </tbody>
-                                    <tbody><tr>
-                                        <td>2</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/3" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>3</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/4" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>4</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/5" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>5</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/6" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>6</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/7" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>7</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/7" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>8</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/7" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>9</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/7" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
-                                    </tr>
-                                    </tbody>
-                                    <tbody><tr>
-                                        <td>10</td>
-                                        <td>Card title</td>
-                                        <td><img src="/images (5).jpg" width="200" alt="images"></td>
-                                        <td><a href="" class="btn btn-warning">edit</a></td>
-                                        <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/7" method="post"></form>
-                                            <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                        
+                                    @endforeach
+                                    
                                     </tr>
                                     </tbody>
                                 </table>
